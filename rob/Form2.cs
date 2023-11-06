@@ -11,8 +11,8 @@ using System.Windows.Forms;
 namespace rob
 {
     public partial class Form2 : Form
-    { 
-        int val = 0 ;
+    {
+        int val = 0;
         public Form2()
         {
             InitializeComponent();
@@ -38,6 +38,10 @@ namespace rob
             int a = val++;
             textBox1.Text = a.ToString();
             lblTimer.Text = a.ToString();
+            if (a == 5)
+            {
+                MessageBox.Show("You loose!");
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -58,6 +62,11 @@ namespace rob
         private void timer1_Tick(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("testing");
         }
     }
 }
